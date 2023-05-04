@@ -15,8 +15,10 @@ class Product(models.Model):
     quantity = models.IntegerField(verbose_name="kolichestvo")
     discount = models.CharField(max_length=10, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+    uploaded = models.DateTimeField(auto_now=True, verbose_name='Изменен')
     created_at = models.DateField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.name
