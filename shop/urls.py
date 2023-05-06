@@ -4,10 +4,10 @@ from .views import *
 
 
 urlpatterns = [
-    path('',  MainViewSet.as_view({'get':'list'}), name='homepage'),
+    path('', MainViewSet.as_view({'get':'list'}), name='homepage'),
     path('api/product/', ProductViewSet.as_view({'get': 'list'}), name="products"),
     path('api/order/', OrderViewSet.as_view({'get': 'list', 'post':'create'}), name="orders"),
-    path('api/cagtegory/<int:cat_id>/', CategoryViewSet.as_view({'get': 'list'}), name="cat"),
+    path('api/cagtegory/<int:cat_id>/', CategoryViewSet.as_view({'get': 'list'}), name="category"),
 ]
 
 #HW
