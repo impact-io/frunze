@@ -17,6 +17,7 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    # test = models.
 
     def __str__(self):
         return self.name
@@ -30,3 +31,4 @@ class Order(models.Model):
 
     def __str__(self):
         return self.phone
+
