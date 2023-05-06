@@ -17,7 +17,12 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    # test = models.
+    hello = (
+        (1, 'good'),
+        (2, 'bad'),
+    )
+    hi = models.IntegerField(verbose_name='how are you?', choices=hello)
+
 
     def __str__(self):
         return self.name
