@@ -17,6 +17,8 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    views_count = models.IntegerField(verbose_name='количество просмотров',default=0)
+
 
     def __str__(self):
         return self.name
