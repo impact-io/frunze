@@ -1,0 +1,7 @@
+django==4.2.1
+pillow==9.5.0
+djangorestframework==3.14.0
+
+
+1) git status - To to check current status
+2) git add - To add files in order to push
