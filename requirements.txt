@@ -3,6 +3,7 @@ pillow==9.5.0
 djangorestframework==3.14.0
 
 
+
 1) git checkout development
 2) git pull
 3) git checkout -b YouTicketName
