@@ -6,7 +6,9 @@ from .views import *
 urlpatterns = [
     path('', MainViewSet.as_view({'get':'list'}), name='homepage'),
     path('api/product/', ProductViewSet.as_view({'get': 'list'}), name="products"),
+    path('api/cagtegory/<int:cat_id>/', CategoryViewSet.as_view({'get': 'list'}), name="cat"),
 ]
+
 
 #HW
 # 1. Pycharm
