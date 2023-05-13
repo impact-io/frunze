@@ -3,10 +3,14 @@ from .views import *
 
 
 
+
 urlpatterns = [
-    path('', MainViewSet.as_view({'get':'list'}), name='homepage'),
-    path('api/product/', ProductViewSet.as_view({'get': 'list'}), name="products"),
+    
+    path('', ProductViewSet.as_view({'get': 'list'}), name="products"),
+    path('api/category/', CategorylistView.as_view(), name='category'),
 ]
+
+
 
 #HW
 # 1. Pycharm
