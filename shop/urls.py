@@ -8,6 +8,8 @@ urlpatterns = [
     
     path('', ProductViewSet.as_view({'get': 'list'}), name="products"),
     path('api/category/', CategorylistView.as_view(), name='category'),
+    path('api/user/', UseCreateView.as_view(), name='user'),
+    path('api/user/<int:pk>', UseDetailView.as_view(), name='user'),
 ]
 
 
