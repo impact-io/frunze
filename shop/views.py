@@ -10,13 +10,13 @@ class ProductViewSet(viewsets.ModelViewSet):
     # permission_classes = [permissions.IsAuthenticated
     
 class CategoryViewSet(viewsets.ModelViewSet):
-    serializer_class = CategorySerializer
+    serializer_class = CategoryListSerializer
     queryset = Product.objects.all()
     
     def list(self, request, *args, **kwargs):
         cat = self.kwargs['cat_id']
         queryset = Product.objects.filter(category = cat)
-        serializer = CategorySerializer(queryset, many=True)
+        serializer = CategoryListSerializer(queryset, many=True)
         return Response(serializer.data)
 
 
