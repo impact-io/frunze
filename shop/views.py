@@ -1,10 +1,8 @@
-from django.http import HttpResponse
 from rest_framework import viewsets
-from rest_framework import permissions
-from .serializers import  ProductSerializer,CategorySerializer
-from .models import Product
+from .serializers import  ProductSerializer, CategoryListSerializer
+from .models import Product, Category
 from rest_framework.response import Response
-
+from rest_framework import generics
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter()
@@ -25,3 +23,9 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class MainViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     queryset = Product.objects.filter(discount__gte=0)
+
+
+class CategorylistView(generics.ListAPIView):
+    serializer_class = CategoryListSerializer
+    queryset = Category.objects.filter()
+    

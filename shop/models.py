@@ -7,6 +7,14 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+class Category(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+
+    
+    def __str__(self):
+        return self.name
+
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100, blank=True)
@@ -20,5 +28,6 @@ class Product(models.Model):
     created_at = models.DateField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
+    
     def __str__(self):
         return self.name
