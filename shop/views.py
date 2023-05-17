@@ -7,10 +7,10 @@ from rest_framework import generics
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter()
     serializer_class = ProductSerializer
-    # permission_classes = [permissions.IsAuthenticated
-    
+
+
 class CategoryViewSet(viewsets.ModelViewSet):
-    serializer_class = CategorySerializer
+    serializer_class = CategoryListSerializer
     queryset = Product.objects.all()
     
     def list(self, request, *args, **kwargs):
