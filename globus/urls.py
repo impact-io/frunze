@@ -3,9 +3,6 @@ from django.urls import path, include
 
 
 
-def jls_extract_def():
-    return 'user/'
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),

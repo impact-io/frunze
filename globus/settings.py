@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'shop',
     'user',
     'rest_framework',
-   
     
 ]
 
