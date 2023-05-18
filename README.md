@@ -23,6 +23,16 @@ E-commerce developed using Django/DRF
 > (venv)$ pip install -r requirements.txt
 
 
+1) git checkout development
+2) git pull
+3) git checkout -b YouTicketName
+
+
+1) git status - To to check current status
+2) git add - To add files in order to push
+3) git commit -m "text" - to add a comment
+4) git push - to send changes to github
+
 
 
 
