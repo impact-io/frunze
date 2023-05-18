@@ -16,7 +16,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         cat = self.kwargs['cat_id']
         queryset = Product.objects.filter(category = cat)
-        serializer = CategorySerializer(queryset, many=True)
+        serializer = CategoryListSerializer(queryset, many=True)
         return Response(serializer.data)
 
 
